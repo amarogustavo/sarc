@@ -40,4 +40,9 @@ public class Tool {
     public void settype(ToolType type) {
         this.type = type;
     }
+
+    public @NotBlank(message = "Tipo de Tool é obrigatório") ToolType getTipo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getTipo'");
+    }
 }
