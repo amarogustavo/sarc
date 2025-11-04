@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        module: [class-service, user-service, booking-service]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: "temurin", java-version: "21" }
+      - name: Build & Test
+        run: mvn -f ${{ matrix.module }}/pom.xml -B verify
