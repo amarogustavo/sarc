@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sarc.user_service.entity.User;
+import com.sarc.user_service.repository.UserRepository;
+
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;

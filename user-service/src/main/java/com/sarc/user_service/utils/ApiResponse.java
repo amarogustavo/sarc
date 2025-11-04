@@ -3,7 +3,7 @@ package com.sarc.user_service.utils;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ApiResponse {
+public class ApiResponse<T> {
     private T data;
     private String error;
 
@@ -31,5 +31,4 @@ public class ApiResponse {
     public String getError() {
         return error;
     }
-}
 }
