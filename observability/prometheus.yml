@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'turma-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['class-service:8081']
+
+  - job_name: 'usuario-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['user-service:8082']
+
+  - job_name: 'reserva-service'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['booking-service:8083']
